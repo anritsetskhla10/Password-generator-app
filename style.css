@@ -1,0 +1,404 @@
+
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
+
+*{
+    font-family: "JetBrains Mono", monospace;
+}
+
+
+body{
+    min-width: 375px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: linear-gradient(to bottom, #14131b, #08070b);
+    background-repeat: no-repeat;
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 64px 0 16px;
+    padding: 0 16px;
+}
+
+h1{
+    font-family: "JetBrains Mono", monospace;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    color: #817d92;
+    margin-bottom: 16px;
+}
+
+.password{
+    width: 343px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 17px 15.5px 15px 16px;
+    background-color: #24232c;
+}
+
+.password p{
+    font-family: "JetBrains Mono", monospace;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: left;
+    color: #e6e5ea;
+}
+
+.copy-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+}
+
+.copied{
+    display: none;
+}
+
+.copied-active{
+    font-size: 18px;
+    font-weight: bold;
+    text-align: left;
+    color: #a4ffaf;
+}
+
+#copy:hover{
+    cursor: pointer;
+    filter: brightness(0) invert(1);
+      
+}
+
+main{
+    width: 343px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 63px;
+    background-color: #24232c;
+}
+
+.length-range{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 21px 0 31px;
+    position: relative;
+}
+
+#slider{
+    width: 343px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;
+}
+
+h2{
+    font-size: 16px;
+    font-weight: bold;
+    text-align: left;
+    color: #e6e5ea;
+}
+
+span{
+    font-size: 24px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #a4ffaf;
+}
+
+/* length slider */
+
+.range{
+    width: 311px;
+    height: 8px;
+    margin: 23px 0 11px;
+    background-color: #18171f;
+    appearance: none;
+}
+
+.range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-color: #e6e5ea;
+    transition: 0.1s;
+    cursor: grab;
+    position: relative;
+    z-index: 2;
+  }
+  
+  .range::-webkit-slider-thumb:hover {
+    border: solid 2px #a4ffaf;
+    background-color: #18171f;
+  }
+
+  .range::-webkit-slider-thumb:active {
+    -webkit-appearance: none;
+    cursor: grabbing;
+    background-color: #a4ffaf;
+  }
+
+ .range-active{
+    background-color: #a4ffaf;
+    width: 50%;
+    height: 8px;
+    position: absolute;
+    bottom: 11px;
+    left: 16px;
+ }
+
+/* length slider end */
+
+/* checkbox */
+
+.checklist {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 16px;
+    margin-bottom: 32px;
+    padding: 0 31px 0 0;
+}
+
+.check-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: left;
+    color: #e6e5ea;
+}
+
+.check {
+    width: 20px;
+    height: 20px;
+    margin: 1px 20px 0 0;
+    background-color: #a4ffaf;
+    opacity: 0;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    border: solid 2px #e6e5ea;
+}
+
+.checkmark:hover{
+    cursor: pointer;
+    border: solid 2px #a4ffaf;
+}
+
+.check:checked + .checkmark {
+    border: none;
+    background: #a4ffaf url(./images/icon-check.svg) center;
+    background-repeat: no-repeat;
+}
+
+
+/* checkbox end */
+
+.strength-checker{
+    width: 311px;
+    margin: 0 0 16px;
+    padding: 14px 16px;
+    background-color: #18171f;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+h3{
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    color: #817d92;
+}
+
+.strength-checker p{
+    font-size: 18px;
+    font-weight: bold;
+    text-align: right;
+    color: #e6e5ea;
+}
+
+.strength-wrapper{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+}
+
+.strength-container{
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+}
+
+.container{
+    width: 10px;
+    height: 28px;
+    border: solid 2px #e6e5ea;
+}
+
+
+
+#generate{
+    width: 311px;
+    padding: 18px 103.9px 17px 103px;
+    border: none;
+    background-color: #a4ffaf;
+    margin-bottom: 16px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    color: #24232c;
+    background-image: url(./images/icon-arrow-right.svg);
+    background-repeat: no-repeat;
+    background-position: 288px center ;
+}
+
+
+#generate:hover {
+    border: solid 2px #a4ffaf;
+    background-color: #24232c;
+    color: #a4ffaf;
+    background-image: url(./images/bx_arrow-to-left.svg);
+}
+
+
+/* ------------------for tablet  and desktop----------------- */
+
+@media screen and (min-width:768px) {
+    
+    
+    header{
+        margin: 133px 0 24px;
+        padding: 0 ;
+    }
+    
+    h1{
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 31px;
+    }
+    
+    .password{
+        width: 540px;
+        padding: 19px 32px;
+    }
+    
+    .password p{
+        font-size: 32px;
+    }
+    
+    main{
+        width: 540px;
+        margin-bottom: 196px;
+    }
+    
+    .length-range{
+        margin: 24px 0 33px;
+        position: relative;
+    }
+    
+    #slider{
+        width: 476px;
+        padding: 0 ;
+    }
+    
+    h2{
+        font-size: 18px;
+    }
+    
+    span{
+        font-size: 32px;
+    }
+      
+    .range{
+        width: 476px;
+        height: 8px;
+        margin: 16px 0 32px;
+    }
+
+    
+     .range-active{
+        bottom: 32px;
+        left: 0;
+     }
+    
+
+    
+    .checklist {
+        gap: 20px;
+        padding: 0 165px 0 0;
+    }
+    
+    .check-container {
+        font-size: 18px;
+    }
+    
+    .check {
+        width: 20px;
+        height: 20px;
+        margin: 1px 20px 0 0;
+        background-color: #a4ffaf;
+        opacity: 0;
+        cursor: pointer;
+    }
+
+    
+    .strength-checker{
+        width: 476px;
+        margin: 0 0 32px;
+        padding: 25px 32px;
+    }
+    
+    h3{
+        font-size: 18px;
+    }
+    
+    .strength-checker p{
+        font-size: 24px;
+    }
+    
+    
+    #generate{
+        width: 476px;
+        padding: 21px 177px 21px 177px;
+        gap: 24px;
+        margin: 0 0 32px 0;
+    }
+    
+    .btn-text{
+        font-size: 18px;
+    }
+    
+
+}
+
+
+
+
+

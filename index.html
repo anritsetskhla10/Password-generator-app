@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Password generator app</title>
+
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+  <header>
+    <h1>
+      Password Generator
+    </h1>
+
+    <div class="password">
+      <p class="password-text">
+        P4$5W0rD!
+      </p>
+
+      <div class="copy-container">
+        <span class="copied">COPIED</span>
+        <img id="copy" src="./images/icon-copy.svg" alt="copy">
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="length-range">
+      <label id="slider" for="range">
+        <h2>Character Length</h2>
+        <span class="current-range">10</span>
+      </label>
+     <input class="range" type="range" min="0" max="20">
+     <div class="range-active"></div>
+    </div>
+
+    <div class="checklist">
+
+          <label class="check-container">
+            <input type="checkbox" class="check uppercase">
+            <span class="checkmark"></span>
+            Include Uppercase Letters
+          </label>
+ 
+
+          <label class="check-container">
+            <input type="checkbox" class="check lowercase" >
+            <span class="checkmark"></span>
+            include Lowercase Letters
+        </label>
+
+          <label class="check-container">
+            <input type="checkbox" class="check numbers">
+            <span class="checkmark"> </span>
+            Include Numbers
+        </label>
+
+          <label class="check-container">
+            <input type="checkbox" class="check symbols">
+            <span class="checkmark"></span>
+            Include Symbols
+        </label>
+ 
+    </div>
+
+    <div class="strength-checker">
+      <h3>STRENGTH</h3>
+      <div class="strength-wrapper">
+        <p class="strength-text"></p>
+        <div class="strength-container">
+            <div class="container first"></div>
+            <div class="container second"></div>
+            <div class="container third"></div>
+            <div class="container fourth"></div>
+        </div>
+      </div>
+
+    </div>
+
+    <button id="generate">
+      GENERATE
+    </button>
+
+  </main>
+
+<script src="script.js"></script>
+
+</body>
+</html>
